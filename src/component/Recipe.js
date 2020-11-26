@@ -11,11 +11,11 @@ const Recipe = ({ recipe }) => {
                         <img src={image} alt={label}/>
                         <h2>{calories}</h2>
                         <a href={url} target="_blank" rel="noopener noreferrer" className={calories > 500 ? 'Fat' : 'Skinny'}>
-                                URL
+                                How to make it?
                         </a>
                         
                         
-                        {calories > 500 ? <h3>Fat-Boy</h3> : <h3>Skinny-Boy</h3>}
+                        {calories > 1000 ? <h3>Fat-Boy</h3> : <h3>Skinny-Boy</h3>}
                         
                         <button onClick={() => setShow(!show)}>Ingredients</button>
                         {show && <RecipeDetails ingredients={ingredients} />}
